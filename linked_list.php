@@ -327,6 +327,8 @@ function dfll_help() {
 	  return;
     }
     $screen->add_help_tab(array('id'=>'settings_page_dfll','title'=>'Linked List Help','content'=>$help));  
+  } else if (function_exists('add_contextual_help')) {
+	  add_contextual_help('settings_page_dfll', $help ); 
   }
   
 }
