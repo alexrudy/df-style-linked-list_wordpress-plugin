@@ -73,7 +73,7 @@ function insert_permalink_glyph_rss($content) {
   return $content;
 }
 add_filter('the_content', 'insert_permalink_glyph_rss');
-add_filter('the_excerpt_rss', 'insert_permalink_glyph_rss');
+add_filter('the_excerpt_rss', 'insert_permalink_glyph_rss', 20);
 
 // Inject permalink glyph into RSS title
 function insert_title_glyph_rss($title,$cdata=true) {
